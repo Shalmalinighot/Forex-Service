@@ -1,4 +1,7 @@
 FROM openjdk:11
-ADD MortgageManagementSystemS1-0.0.1-SNAPSHOT.jar home.jar
+
+COPY target/forex-0.0.1-SNAPSHOT.jar app.jar
+
 EXPOSE 8080
-ENTRYPOINT ["java" ,"-jar", "home.jar"]
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
