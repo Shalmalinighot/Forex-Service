@@ -1,7 +1,10 @@
+
+
+
 FROM openjdk:11
 
-COPY target/devops-integration.jar devops-integration.jar
+ADD target/forex-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "devops-integration.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
